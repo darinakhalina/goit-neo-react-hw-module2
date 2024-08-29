@@ -24,7 +24,7 @@ const localStorageKey = 'feedback';
 
 function App() {
   const [feedback, setFeedback] = useState(() => {
-    const localStorageItem = globalThis.localStorage.getItem(localStorageKey);
+    const localStorageItem = localStorage.getItem(localStorageKey);
     return localStorageItem ? JSON.parse(localStorageItem) : defaultFeedback;
   });
   const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
